@@ -1,0 +1,11 @@
+Scripts/
+Shaders/
+Textures/
+
+Materials/t2[uU]Sprite-*
+
+/*.meta
+License.txt
+
+**/_ReadMe.txt
+**/_ReadMe.txt.meta

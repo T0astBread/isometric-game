@@ -1,5 +1,7 @@
 Generated/
 Generated.meta
 
+!Generated/*.png.meta
+
 Backup/
 Backup.meta
