@@ -1,4 +1,4 @@
-Generated/
+Generated/*
 Generated.meta
 
 !Generated/*.png.meta
