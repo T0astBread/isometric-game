@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09e1f7547958334faf5a7d3eb16d951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepSizeX: 0.5
-  stepSizeY: 0.25
-  jumpHeight: 0.35
+  stepSizeX: 1
+  stepSizeY: 0.5
+  jumpHeight: 0.7
   directionalSprites:
   - {fileID: 21300000, guid: b98b90b3e25054d419f497080f54b806, type: 3}
   - {fileID: 21300002, guid: b98b90b3e25054d419f497080f54b806, type: 3}
