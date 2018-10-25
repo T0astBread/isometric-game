@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09e1f7547958334faf5a7d3eb16d951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepSizeX: 1.575
-  stepSizeY: 0.825
-  jumpHeight: 0.75
+  stepSizeX: 0.5
+  stepSizeY: 0.25
+  jumpHeight: 0.35
   directionalSprites:
   - {fileID: 21300000, guid: b98b90b3e25054d419f497080f54b806, type: 3}
   - {fileID: 21300002, guid: b98b90b3e25054d419f497080f54b806, type: 3}
@@ -201,7 +201,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Move
-  m_Speed: 2.5
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101074756588448176}
