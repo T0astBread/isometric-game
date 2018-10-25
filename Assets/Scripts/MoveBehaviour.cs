@@ -21,7 +21,7 @@ public class MoveBehaviour : StateMachineBehaviour
 		this.prevNormalizedTime = 0;
 
 		int sprite;
-		
+
 		float yMovement = GetAxisMovement(animator, "y");
 		float xMovement = 0;
 		if (yMovement == 0)
@@ -64,9 +64,15 @@ public class MoveBehaviour : StateMachineBehaviour
 	//}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-	//override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	//
-	//}
+	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	{
+		animator.transform.position = RoundPosition(animator.transform.position);
+	}
+
+	private Vector3 RoundPosition(Vector3 v)
+	{
+		return new Vector3(Mathf.Round(v.x), Mathf.Round(v.y * 2)/2, v.z);
+	}
 
 	// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here
 	override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -83,8 +89,9 @@ public class MoveBehaviour : StateMachineBehaviour
 		animator.transform.position = new Vector3(position.x + scaledMovement.x, position.y + scaledMovement.y + deltaJumpY, position.z);
 	}
 
-	private float JumpY(float t) {
-		return Mathf.Clamp((-Mathf.Pow(4 * t - 2, 2) + 4) / 4, 0f, 1f) * this.jumpHeight;
+	private float JumpY(float t)
+	{
+		return Mathf.Clamp((-Mathf.Pow(4 * t - 2, 2) + 4) / 4 * this.jumpHeight, 0, this.jumpHeight);
 	}
 
 	// OnStateIK is called right after Animator.OnAnimatorIK(). Code that sets up animation IK (inverse kinematics) should be implemented here.
