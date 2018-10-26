@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 25.10.2018 08:28:20-->
+<!--Last exported: 26.10.2018 22:47:38-->
 <Tiled2Unity version="1.0.13.2">
   <AssignMaterial mesh="m_test_mesh_0001" material="Tiles_spritesheet" />
   <AssignMaterial mesh="m_test_mesh_0002" material="Tiles_spritesheet" />
@@ -14,8 +14,131 @@
       <TileLayer offsetX="0" offsetY="0" />
       <GameObject name="Tiles_spritesheet" x="0" y="0" mesh="m_test_mesh_0002" sortingLayerName="" sortingOrder="1" opacity="1" />
     </GameObject>
+    <GameObject name="TileObjects" x="0" y="0" z="0">
+      <ObjectLayer offsetX="0" offsetY="0" color="#ff808080" />
+      <GameObject name="Ground" x="18" y="-6" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="43" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="80" tmx-object-y="112" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="17" y="-6.5" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="44" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="80" tmx-object-y="128" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="7" y="-6.5" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="49" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="0" tmx-object-y="208" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="16" y="-7" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="45" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="80" tmx-object-y="144" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="15" y="-7.5" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="46" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="80" tmx-object-y="160" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="14" y="-8" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="47" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="80" tmx-object-y="176" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="13" y="-8.5" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="48" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="80" tmx-object-y="192" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="9" y="-8.5" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="51" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="48" tmx-object-y="224" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="5" y="-8.5" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="58" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="16" tmx-object-y="256" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="12" y="-9" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="50" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="80" tmx-object-y="208" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="10" y="-9" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="52" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="64" tmx-object-y="224" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="8" y="-9" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="56" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="48" tmx-object-y="240" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="6" y="-9" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="59" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="32" tmx-object-y="256" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="11" y="-9.5" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="53" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="80" tmx-object-y="224" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="7" y="-9.5" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="60" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="48" tmx-object-y="256" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="12" y="-10" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="54" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="96" tmx-object-y="224" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="13" y="-10.5" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="55" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="112" tmx-object-y="224" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="12" y="-11" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="57" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="112" tmx-object-y="240" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="11" y="-11.5" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="61" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="112" tmx-object-y="256" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+      <GameObject name="Ground" x="10" y="-12" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="62" tmx-object-name="Ground" tmx-object-type="" tmx-object-x="112" tmx-object-y="272" tmx-object-width="16" tmx-object-height="16" tmx-object-rotation="0" />
+        <PolygonCollider2D>
+          <Path>0,0 1,-0.5 0,-1 -1,-0.5</Path>
+        </PolygonCollider2D>
+      </GameObject>
+    </GameObject>
   </Prefab>
-  <ImportMesh filename="m_test_mesh_0001.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ21fdGVzdF9tZXNoXzAwMDEub2JqJw0KDQojIFZlcnRpY2VzIChDb3VudCA9IDEwNCkNCnYgLTE3IC04IDANCnYgLTE5IC04IDANCnYgLTE5IC03IDANCnYgLTE3IC03IDANCnYgLTE2IC04LjUgMA0KdiAtMTggLTguNSAwDQp2IC0xOCAtNy41IDANCnYgLTE2IC03LjUgMA0KdiAtMTUgLTkgMA0KdiAtMTcgLTkgMA0KdiAtMTcgLTggMA0KdiAtMTUgLTggMA0KdiAtMTQgLTkuNSAwDQp2IC0xNiAtOS41IDANCnYgLTE2IC04LjUgMA0KdiAtMTQgLTguNSAwDQp2IC0xOCAtMTEuNSAwDQp2IC0yMCAtMTEuNSAwDQp2IC0yMCAtMTAuNSAwDQp2IC0xOCAtMTAuNSAwDQp2IC0xOSAtMTIgMA0KdiAtMjEgLTEyIDANCnYgLTIxIC0xMSAwDQp2IC0xOSAtMTEgMA0KdiAtMjIgLTEzLjUgMA0KdiAtMjQgLTEzLjUgMA0KdiAtMjQgLTEyLjUgMA0KdiAtMjIgLTEyLjUgMA0KdiAtMTMgLTEwIDANCnYgLTE1IC0xMCAwDQp2IC0xNSAtOSAwDQp2IC0xMyAtOSAwDQp2IC0xNyAtMTIgMA0KdiAtMTkgLTEyIDANCnYgLTE5IC0xMSAwDQp2IC0xNyAtMTEgMA0KdiAtMTggLTEyLjUgMA0KdiAtMjAgLTEyLjUgMA0KdiAtMjAgLTExLjUgMA0KdiAtMTggLTExLjUgMA0KdiAtMjAgLTEzLjUgMA0KdiAtMjIgLTEzLjUgMA0KdiAtMjIgLTEyLjUgMA0KdiAtMjAgLTEyLjUgMA0KdiAtMjEgLTE0IDANCnYgLTIzIC0xNCAwDQp2IC0yMyAtMTMgMA0KdiAtMjEgLTEzIDANCnYgLTEyIC0xMC41IDANCnYgLTE0IC0xMC41IDANCnYgLTE0IC05LjUgMA0KdiAtMTIgLTkuNSAwDQp2IC02IC04LjUgMA0KdiAtOCAtOC41IDANCnYgLTggLTcuNSAwDQp2IC02IC03LjUgMA0KdiAtMTEgLTExIDANCnYgLTEzIC0xMSAwDQp2IC0xMyAtMTAgMA0KdiAtMTEgLTEwIDANCnYgLTkgLTExIDANCnYgLTExIC0xMSAwDQp2IC0xMSAtMTAgMA0KdiAtOSAtMTAgMA0KdiAtMTAgLTExLjUgMA0KdiAtMTIgLTExLjUgMA0KdiAtMTIgLTEwLjUgMA0KdiAtMTAgLTEwLjUgMA0KdiAtMTEgLTEyIDANCnYgLTEzIC0xMiAwDQp2IC0xMyAtMTEgMA0KdiAtMTEgLTExIDANCnYgLTEyIC0xMi41IDANCnYgLTE0IC0xMi41IDANCnYgLTE0IC0xMS41IDANCnYgLTEyIC0xMS41IDANCnYgLTcgLTExIDANCnYgLTkgLTExIDANCnYgLTkgLTEwIDANCnYgLTcgLTEwIDANCnYgLTExIC0xMyAwDQp2IC0xMyAtMTMgMA0KdiAtMTMgLTEyIDANCnYgLTExIC0xMiAwDQp2IC00IC0xMC41IDANCnYgLTYgLTEwLjUgMA0KdiAtNiAtOS41IDANCnYgLTQgLTkuNSAwDQp2IC01IC0xMSAwDQp2IC03IC0xMSAwDQp2IC03IC0xMCAwDQp2IC01IC0xMCAwDQp2IC02IC0xMS41IDANCnYgLTggLTExLjUgMA0KdiAtOCAtMTAuNSAwDQp2IC02IC0xMC41IDANCnYgLTEwIC0xMy41IDANCnYgLTEyIC0xMy41IDANCnYgLTEyIC0xMi41IDANCnYgLTEwIC0xMi41IDANCnYgLTkgLTE0IDANCnYgLTExIC0xNCAwDQp2IC0xMSAtMTMgMA0KdiAtOSAtMTMgMA0KDQojIFRleHR1cmUgY29vcmlkaW5hdGVzIChDb3VudCA9IDEyKQ0KdnQgMCAwLjY2NjY2NjYNCnZ0IDEgMC42NjY2NjY2DQp2dCAxIDAuODMzMzMzMw0KdnQgMCAwLjgzMzMzMzMNCnZ0IDAgMC4zMzMzMzMzDQp2dCAxIDAuMzMzMzMzMw0KdnQgMSAwLjUNCnZ0IDAgMC41DQp2dCAwIDANCnZ0IDEgMA0KdnQgMSAwLjE2NjY2NjcNCnZ0IDAgMC4xNjY2NjY3DQoNCiMgTm9ybWFsDQp2biAwIDAgLTENCg0KIyBNZXNoIGRlc2NyaXB0aW9uDQpnIG1fdGVzdF9tZXNoXzAwMDENCg0KIyBGYWNlcw0KZiAxLzEvMSAyLzIvMSAzLzMvMSA0LzQvMQpmIDUvMS8xIDYvMi8xIDcvMy8xIDgvNC8xCmYgOS81LzEgMTAvNi8xIDExLzcvMSAxMi84LzEKZiAxMy81LzEgMTQvNi8xIDE1LzcvMSAxNi84LzEKZiAxNy85LzEgMTgvMTAvMSAxOS8xMS8xIDIwLzEyLzEKZiAyMS85LzEgMjIvMTAvMSAyMy8xMS8xIDI0LzEyLzEKZiAyNS85LzEgMjYvMTAvMSAyNy8xMS8xIDI4LzEyLzEKZiAyOS8xLzEgMzAvMi8xIDMxLzMvMSAzMi80LzEKZiAzMy85LzEgMzQvMTAvMSAzNS8xMS8xIDM2LzEyLzEKZiAzNy85LzEgMzgvMTAvMSAzOS8xMS8xIDQwLzEyLzEKZiA0MS85LzEgNDIvMTAvMSA0My8xMS8xIDQ0LzEyLzEKZiA0NS85LzEgNDYvMTAvMSA0Ny8xMS8xIDQ4LzEyLzEKZiA0OS8xLzEgNTAvMi8xIDUxLzMvMSA1Mi80LzEKZiA1My81LzEgNTQvNi8xIDU1LzcvMSA1Ni84LzEKZiA1Ny8xLzEgNTgvMi8xIDU5LzMvMSA2MC80LzEKZiA2MS8xLzEgNjIvMi8xIDYzLzMvMSA2NC80LzEKZiA2NS8xLzEgNjYvMi8xIDY3LzMvMSA2OC80LzEKZiA2OS8xLzEgNzAvMi8xIDcxLzMvMSA3Mi80LzEKZiA3My8xLzEgNzQvMi8xIDc1LzMvMSA3Ni80LzEKZiA3Ny8xLzEgNzgvMi8xIDc5LzMvMSA4MC80LzEKZiA4MS8xLzEgODIvMi8xIDgzLzMvMSA4NC80LzEKZiA4NS8xLzEgODYvMi8xIDg3LzMvMSA4OC80LzEKZiA4OS8xLzEgOTAvMi8xIDkxLzMvMSA5Mi80LzEKZiA5My8xLzEgOTQvMi8xIDk1LzMvMSA5Ni80LzEKZiA5Ny8xLzEgOTgvMi8xIDk5LzMvMSAxMDAvNC8xCmYgMTAxLzEvMSAxMDIvMi8xIDEwMy8zLzEgMTA0LzQvMQoNCg==</ImportMesh>
+  <ImportMesh filename="m_test_mesh_0001.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ21fdGVzdF9tZXNoXzAwMDEub2JqJw0KDQojIFZlcnRpY2VzIChDb3VudCA9IDEwOCkNCnYgLTE3IC04IDANCnYgLTE5IC04IDANCnYgLTE5IC03IDANCnYgLTE3IC03IDANCnYgLTE2IC04LjUgMA0KdiAtMTggLTguNSAwDQp2IC0xOCAtNy41IDANCnYgLTE2IC03LjUgMA0KdiAtMTUgLTkgMA0KdiAtMTcgLTkgMA0KdiAtMTcgLTggMA0KdiAtMTUgLTggMA0KdiAtMTQgLTkuNSAwDQp2IC0xNiAtOS41IDANCnYgLTE2IC04LjUgMA0KdiAtMTQgLTguNSAwDQp2IC0xOCAtMTEuNSAwDQp2IC0yMCAtMTEuNSAwDQp2IC0yMCAtMTAuNSAwDQp2IC0xOCAtMTAuNSAwDQp2IC0xOSAtMTIgMA0KdiAtMjEgLTEyIDANCnYgLTIxIC0xMSAwDQp2IC0xOSAtMTEgMA0KdiAtMjIgLTEzLjUgMA0KdiAtMjQgLTEzLjUgMA0KdiAtMjQgLTEyLjUgMA0KdiAtMjIgLTEyLjUgMA0KdiAtMTMgLTEwIDANCnYgLTE1IC0xMCAwDQp2IC0xNSAtOSAwDQp2IC0xMyAtOSAwDQp2IC0xNyAtMTIgMA0KdiAtMTkgLTEyIDANCnYgLTE5IC0xMSAwDQp2IC0xNyAtMTEgMA0KdiAtMTggLTEyLjUgMA0KdiAtMjAgLTEyLjUgMA0KdiAtMjAgLTExLjUgMA0KdiAtMTggLTExLjUgMA0KdiAtMjAgLTEzLjUgMA0KdiAtMjIgLTEzLjUgMA0KdiAtMjIgLTEyLjUgMA0KdiAtMjAgLTEyLjUgMA0KdiAtMjEgLTE0IDANCnYgLTIzIC0xNCAwDQp2IC0yMyAtMTMgMA0KdiAtMjEgLTEzIDANCnYgLTEyIC0xMC41IDANCnYgLTE0IC0xMC41IDANCnYgLTE0IC05LjUgMA0KdiAtMTIgLTkuNSAwDQp2IC02IC04LjUgMA0KdiAtOCAtOC41IDANCnYgLTggLTcuNSAwDQp2IC02IC03LjUgMA0KdiAtMTEgLTExIDANCnYgLTEzIC0xMSAwDQp2IC0xMyAtMTAgMA0KdiAtMTEgLTEwIDANCnYgLTggLTEwLjUgMA0KdiAtMTAgLTEwLjUgMA0KdiAtMTAgLTkuNSAwDQp2IC04IC05LjUgMA0KdiAtOSAtMTEgMA0KdiAtMTEgLTExIDANCnYgLTExIC0xMCAwDQp2IC05IC0xMCAwDQp2IC0xMCAtMTEuNSAwDQp2IC0xMiAtMTEuNSAwDQp2IC0xMiAtMTAuNSAwDQp2IC0xMCAtMTAuNSAwDQp2IC0xMSAtMTIgMA0KdiAtMTMgLTEyIDANCnYgLTEzIC0xMSAwDQp2IC0xMSAtMTEgMA0KdiAtMTIgLTEyLjUgMA0KdiAtMTQgLTEyLjUgMA0KdiAtMTQgLTExLjUgMA0KdiAtMTIgLTExLjUgMA0KdiAtNyAtMTEgMA0KdiAtOSAtMTEgMA0KdiAtOSAtMTAgMA0KdiAtNyAtMTAgMA0KdiAtMTEgLTEzIDANCnYgLTEzIC0xMyAwDQp2IC0xMyAtMTIgMA0KdiAtMTEgLTEyIDANCnYgLTQgLTEwLjUgMA0KdiAtNiAtMTAuNSAwDQp2IC02IC05LjUgMA0KdiAtNCAtOS41IDANCnYgLTUgLTExIDANCnYgLTcgLTExIDANCnYgLTcgLTEwIDANCnYgLTUgLTEwIDANCnYgLTYgLTExLjUgMA0KdiAtOCAtMTEuNSAwDQp2IC04IC0xMC41IDANCnYgLTYgLTEwLjUgMA0KdiAtMTAgLTEzLjUgMA0KdiAtMTIgLTEzLjUgMA0KdiAtMTIgLTEyLjUgMA0KdiAtMTAgLTEyLjUgMA0KdiAtOSAtMTQgMA0KdiAtMTEgLTE0IDANCnYgLTExIC0xMyAwDQp2IC05IC0xMyAwDQoNCiMgVGV4dHVyZSBjb29yaWRpbmF0ZXMgKENvdW50ID0gMTIpDQp2dCAwIDAuNjY2NjY2Ng0KdnQgMSAwLjY2NjY2NjYNCnZ0IDEgMC44MzMzMzMzDQp2dCAwIDAuODMzMzMzMw0KdnQgMCAwLjMzMzMzMzMNCnZ0IDEgMC4zMzMzMzMzDQp2dCAxIDAuNQ0KdnQgMCAwLjUNCnZ0IDAgMA0KdnQgMSAwDQp2dCAxIDAuMTY2NjY2Nw0KdnQgMCAwLjE2NjY2NjcNCg0KIyBOb3JtYWwNCnZuIDAgMCAtMQ0KDQojIE1lc2ggZGVzY3JpcHRpb24NCmcgbV90ZXN0X21lc2hfMDAwMQ0KDQojIEZhY2VzDQpmIDEvMS8xIDIvMi8xIDMvMy8xIDQvNC8xCmYgNS8xLzEgNi8yLzEgNy8zLzEgOC80LzEKZiA5LzUvMSAxMC82LzEgMTEvNy8xIDEyLzgvMQpmIDEzLzUvMSAxNC82LzEgMTUvNy8xIDE2LzgvMQpmIDE3LzkvMSAxOC8xMC8xIDE5LzExLzEgMjAvMTIvMQpmIDIxLzkvMSAyMi8xMC8xIDIzLzExLzEgMjQvMTIvMQpmIDI1LzkvMSAyNi8xMC8xIDI3LzExLzEgMjgvMTIvMQpmIDI5LzEvMSAzMC8yLzEgMzEvMy8xIDMyLzQvMQpmIDMzLzkvMSAzNC8xMC8xIDM1LzExLzEgMzYvMTIvMQpmIDM3LzkvMSAzOC8xMC8xIDM5LzExLzEgNDAvMTIvMQpmIDQxLzkvMSA0Mi8xMC8xIDQzLzExLzEgNDQvMTIvMQpmIDQ1LzkvMSA0Ni8xMC8xIDQ3LzExLzEgNDgvMTIvMQpmIDQ5LzEvMSA1MC8yLzEgNTEvMy8xIDUyLzQvMQpmIDUzLzUvMSA1NC82LzEgNTUvNy8xIDU2LzgvMQpmIDU3LzEvMSA1OC8yLzEgNTkvMy8xIDYwLzQvMQpmIDYxLzEvMSA2Mi8yLzEgNjMvMy8xIDY0LzQvMQpmIDY1LzEvMSA2Ni8yLzEgNjcvMy8xIDY4LzQvMQpmIDY5LzEvMSA3MC8yLzEgNzEvMy8xIDcyLzQvMQpmIDczLzEvMSA3NC8yLzEgNzUvMy8xIDc2LzQvMQpmIDc3LzEvMSA3OC8yLzEgNzkvMy8xIDgwLzQvMQpmIDgxLzEvMSA4Mi8yLzEgODMvMy8xIDg0LzQvMQpmIDg1LzEvMSA4Ni8yLzEgODcvMy8xIDg4LzQvMQpmIDg5LzEvMSA5MC8yLzEgOTEvMy8xIDkyLzQvMQpmIDkzLzEvMSA5NC8yLzEgOTUvMy8xIDk2LzQvMQpmIDk3LzEvMSA5OC8yLzEgOTkvMy8xIDEwMC80LzEKZiAxMDEvMS8xIDEwMi8yLzEgMTAzLzMvMSAxMDQvNC8xCmYgMTA1LzEvMSAxMDYvMi8xIDEwNy8zLzEgMTA4LzQvMQoNCg==</ImportMesh>
   <ImportMesh filename="m_test_mesh_0002.obj">IyBUaWxlZDJVbml0eSBnZW5lcmF0ZWQgZmlsZS4gRG8gbm90IG1vZGlmeSBieSBoYW5kLg0KIyBXYXZlZnJvbnQgZmlsZSBmb3IgJ21fdGVzdF9tZXNoXzAwMDIub2JqJw0KDQojIFZlcnRpY2VzIChDb3VudCA9IDEwOCkNCnYgLTE3IC03IDANCnYgLTE5IC03IDANCnYgLTE5IC02IDANCnYgLTE3IC02IDANCnYgLTE2IC03LjUgMA0KdiAtMTggLTcuNSAwDQp2IC0xOCAtNi41IDANCnYgLTE2IC02LjUgMA0KdiAtMTUgLTggMA0KdiAtMTcgLTggMA0KdiAtMTcgLTcgMA0KdiAtMTUgLTcgMA0KdiAtMTQgLTguNSAwDQp2IC0xNiAtOC41IDANCnYgLTE2IC03LjUgMA0KdiAtMTQgLTcuNSAwDQp2IC0xOCAtMTAuNSAwDQp2IC0yMCAtMTAuNSAwDQp2IC0yMCAtOS41IDANCnYgLTE4IC05LjUgMA0KdiAtMTkgLTExIDANCnYgLTIxIC0xMSAwDQp2IC0yMSAtMTAgMA0KdiAtMTkgLTEwIDANCnYgLTIyIC0xMi41IDANCnYgLTI0IC0xMi41IDANCnYgLTI0IC0xMS41IDANCnYgLTIyIC0xMS41IDANCnYgLTEzIC05IDANCnYgLTE1IC05IDANCnYgLTE1IC04IDANCnYgLTEzIC04IDANCnYgLTE3IC0xMSAwDQp2IC0xOSAtMTEgMA0KdiAtMTkgLTEwIDANCnYgLTE3IC0xMCAwDQp2IC0xOCAtMTEuNSAwDQp2IC0yMCAtMTEuNSAwDQp2IC0yMCAtMTAuNSAwDQp2IC0xOCAtMTAuNSAwDQp2IC0yMCAtMTIuNSAwDQp2IC0yMiAtMTIuNSAwDQp2IC0yMiAtMTEuNSAwDQp2IC0yMCAtMTEuNSAwDQp2IC0yMSAtMTMgMA0KdiAtMjMgLTEzIDANCnYgLTIzIC0xMiAwDQp2IC0yMSAtMTIgMA0KdiAtMTIgLTkuNSAwDQp2IC0xNCAtOS41IDANCnYgLTE0IC04LjUgMA0KdiAtMTIgLTguNSAwDQp2IC02IC03LjUgMA0KdiAtOCAtNy41IDANCnYgLTggLTYuNSAwDQp2IC02IC02LjUgMA0KdiAtMTEgLTEwIDANCnYgLTEzIC0xMCAwDQp2IC0xMyAtOSAwDQp2IC0xMSAtOSAwDQp2IC04IC05LjUgMA0KdiAtMTAgLTkuNSAwDQp2IC0xMCAtOC41IDANCnYgLTggLTguNSAwDQp2IC05IC0xMCAwDQp2IC0xMSAtMTAgMA0KdiAtMTEgLTkgMA0KdiAtOSAtOSAwDQp2IC0xMCAtMTAuNSAwDQp2IC0xMiAtMTAuNSAwDQp2IC0xMiAtOS41IDANCnYgLTEwIC05LjUgMA0KdiAtMTEgLTExIDANCnYgLTEzIC0xMSAwDQp2IC0xMyAtMTAgMA0KdiAtMTEgLTEwIDANCnYgLTEyIC0xMS41IDANCnYgLTE0IC0xMS41IDANCnYgLTE0IC0xMC41IDANCnYgLTEyIC0xMC41IDANCnYgLTcgLTEwIDANCnYgLTkgLTEwIDANCnYgLTkgLTkgMA0KdiAtNyAtOSAwDQp2IC0xMSAtMTIgMA0KdiAtMTMgLTEyIDANCnYgLTEzIC0xMSAwDQp2IC0xMSAtMTEgMA0KdiAtNCAtOS41IDANCnYgLTYgLTkuNSAwDQp2IC02IC04LjUgMA0KdiAtNCAtOC41IDANCnYgLTUgLTEwIDANCnYgLTcgLTEwIDANCnYgLTcgLTkgMA0KdiAtNSAtOSAwDQp2IC02IC0xMC41IDANCnYgLTggLTEwLjUgMA0KdiAtOCAtOS41IDANCnYgLTYgLTkuNSAwDQp2IC0xMCAtMTIuNSAwDQp2IC0xMiAtMTIuNSAwDQp2IC0xMiAtMTEuNSAwDQp2IC0xMCAtMTEuNSAwDQp2IC05IC0xMyAwDQp2IC0xMSAtMTMgMA0KdiAtMTEgLTEyIDANCnYgLTkgLTEyIDANCg0KIyBUZXh0dXJlIGNvb3JpZGluYXRlcyAoQ291bnQgPSAxMikNCnZ0IDAgMC44MzMzMzMzDQp2dCAxIDAuODMzMzMzMw0KdnQgMSAxDQp2dCAwIDENCnZ0IDAgMC41DQp2dCAxIDAuNQ0KdnQgMSAwLjY2NjY2NjYNCnZ0IDAgMC42NjY2NjY2DQp2dCAwIDAuMTY2NjY2Nw0KdnQgMSAwLjE2NjY2NjcNCnZ0IDEgMC4zMzMzMzMzDQp2dCAwIDAuMzMzMzMzMw0KDQojIE5vcm1hbA0Kdm4gMCAwIC0xDQoNCiMgTWVzaCBkZXNjcmlwdGlvbg0KZyBtX3Rlc3RfbWVzaF8wMDAyDQoNCiMgRmFjZXMNCmYgMS8xLzEgMi8yLzEgMy8zLzEgNC80LzEKZiA1LzEvMSA2LzIvMSA3LzMvMSA4LzQvMQpmIDkvNS8xIDEwLzYvMSAxMS83LzEgMTIvOC8xCmYgMTMvNS8xIDE0LzYvMSAxNS83LzEgMTYvOC8xCmYgMTcvOS8xIDE4LzEwLzEgMTkvMTEvMSAyMC8xMi8xCmYgMjEvOS8xIDIyLzEwLzEgMjMvMTEvMSAyNC8xMi8xCmYgMjUvOS8xIDI2LzEwLzEgMjcvMTEvMSAyOC8xMi8xCmYgMjkvMS8xIDMwLzIvMSAzMS8zLzEgMzIvNC8xCmYgMzMvOS8xIDM0LzEwLzEgMzUvMTEvMSAzNi8xMi8xCmYgMzcvOS8xIDM4LzEwLzEgMzkvMTEvMSA0MC8xMi8xCmYgNDEvOS8xIDQyLzEwLzEgNDMvMTEvMSA0NC8xMi8xCmYgNDUvOS8xIDQ2LzEwLzEgNDcvMTEvMSA0OC8xMi8xCmYgNDkvMS8xIDUwLzIvMSA1MS8zLzEgNTIvNC8xCmYgNTMvNS8xIDU0LzYvMSA1NS83LzEgNTYvOC8xCmYgNTcvMS8xIDU4LzIvMSA1OS8zLzEgNjAvNC8xCmYgNjEvMS8xIDYyLzIvMSA2My8zLzEgNjQvNC8xCmYgNjUvMS8xIDY2LzIvMSA2Ny8zLzEgNjgvNC8xCmYgNjkvMS8xIDcwLzIvMSA3MS8zLzEgNzIvNC8xCmYgNzMvMS8xIDc0LzIvMSA3NS8zLzEgNzYvNC8xCmYgNzcvMS8xIDc4LzIvMSA3OS8zLzEgODAvNC8xCmYgODEvMS8xIDgyLzIvMSA4My8zLzEgODQvNC8xCmYgODUvMS8xIDg2LzIvMSA4Ny8zLzEgODgvNC8xCmYgODkvMS8xIDkwLzIvMSA5MS8zLzEgOTIvNC8xCmYgOTMvMS8xIDk0LzIvMSA5NS8zLzEgOTYvNC8xCmYgOTcvMS8xIDk4LzIvMSA5OS8zLzEgMTAwLzQvMQpmIDEwMS8xLzEgMTAyLzIvMSAxMDMvMy8xIDEwNC80LzEKZiAxMDUvMS8xIDEwNi8yLzEgMTA3LzMvMSAxMDgvNC8xCg0K</ImportMesh>
   <InternalTexture assetPath="Assets/Sprites/Generated/Tiles_spritesheet.png" materialName="Tiles_spritesheet" />
 </Tiled2Unity>
