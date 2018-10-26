@@ -12,12 +12,16 @@ public class MoveBehaviour : StateMachineBehaviour
 
 	public Sprite[] directionalSprites;  // north east, south east, south west, north west
 
+	private Transform spriteWrapper;
 	private Vector2 movement;
 	private float prevNormalizedTime;
+
+	public float CurrentJumpOffset { get; private set; }
 
 	// OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
+		this.spriteWrapper = animator.transform.Find("SpriteWrapper");
 		this.prevNormalizedTime = 0;
 
 		int sprite;
@@ -46,7 +50,7 @@ public class MoveBehaviour : StateMachineBehaviour
 			}
 		}
 
-		animator.GetComponent<SpriteRenderer>().sprite = this.directionalSprites[sprite];
+		animator.GetComponentInChildren<SpriteRenderer>().sprite = this.directionalSprites[sprite];
 	}
 
 	private float GetAxisMovement(Animator animator, string axisName)
@@ -71,7 +75,7 @@ public class MoveBehaviour : StateMachineBehaviour
 
 	private Vector3 RoundPosition(Vector3 v)
 	{
-		return new Vector3(Mathf.Round(v.x), Mathf.Round(v.y * 2)/2, v.z);
+		return new Vector3(Mathf.Round(v.x), Mathf.Round(v.y * 2) / 2, v.z);
 	}
 
 	// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here
@@ -79,6 +83,7 @@ public class MoveBehaviour : StateMachineBehaviour
 	{
 		float prevJumpY = JumpY(this.prevNormalizedTime);
 		float currJumpY = JumpY(stateInfo.normalizedTime);
+		this.CurrentJumpOffset = currJumpY;
 		float deltaJumpY = currJumpY - prevJumpY;
 
 		float deltaTime = stateInfo.normalizedTime - this.prevNormalizedTime;
@@ -86,7 +91,9 @@ public class MoveBehaviour : StateMachineBehaviour
 
 		Vector2 scaledMovement = this.movement * deltaTime;
 		Vector3 position = animator.transform.position;
-		animator.transform.position = new Vector3(position.x + scaledMovement.x, position.y + scaledMovement.y + deltaJumpY, position.z);
+		animator.transform.position = new Vector3(position.x + scaledMovement.x, position.y + scaledMovement.y, position.z);
+		
+		spriteWrapper.position += new Vector3(0, deltaJumpY, 0);
 	}
 
 	private float JumpY(float t)
