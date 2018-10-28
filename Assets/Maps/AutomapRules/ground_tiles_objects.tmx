@@ -17,6 +17,10 @@
 </data>
  </layer>
  <objectgroup id="4" name="output_TileObjects">
-  <object id="2" name="Ground" x="0" y="0" width="16" height="16"/>
+  <object id="2" name="Ground" x="0" y="0" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

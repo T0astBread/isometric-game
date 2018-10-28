@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.2.0" orientation="isometric" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="63">
+<map version="1.2" tiledversion="1.2.0" orientation="isometric" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="147">
  <tileset firstgid="1" source="Tilesets/spritesheet-tiles.tsx"/>
  <layer id="1" name="Ground_Bottoms" width="20" height="20">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -27,7 +27,7 @@
  </layer>
  <layer id="2" name="Ground_Tops" width="20" height="20">
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -46,29 +46,129 @@
 0,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
 </data>
  </layer>
  <objectgroup id="4" name="TileObjects">
-  <object id="43" name="Ground" x="80" y="112" width="16" height="16"/>
-  <object id="44" name="Ground" x="80" y="128" width="16" height="16"/>
-  <object id="45" name="Ground" x="80" y="144" width="16" height="16"/>
-  <object id="46" name="Ground" x="80" y="160" width="16" height="16"/>
-  <object id="47" name="Ground" x="80" y="176" width="16" height="16"/>
-  <object id="48" name="Ground" x="80" y="192" width="16" height="16"/>
-  <object id="49" name="Ground" x="0" y="208" width="16" height="16"/>
-  <object id="50" name="Ground" x="80" y="208" width="16" height="16"/>
-  <object id="51" name="Ground" x="48" y="224" width="16" height="16"/>
-  <object id="52" name="Ground" x="64" y="224" width="16" height="16"/>
-  <object id="53" name="Ground" x="80" y="224" width="16" height="16"/>
-  <object id="54" name="Ground" x="96" y="224" width="16" height="16"/>
-  <object id="55" name="Ground" x="112" y="224" width="16" height="16"/>
-  <object id="56" name="Ground" x="48" y="240" width="16" height="16"/>
-  <object id="57" name="Ground" x="112" y="240" width="16" height="16"/>
-  <object id="58" name="Ground" x="16" y="256" width="16" height="16"/>
-  <object id="59" name="Ground" x="32" y="256" width="16" height="16"/>
-  <object id="60" name="Ground" x="48" y="256" width="16" height="16"/>
-  <object id="61" name="Ground" x="112" y="256" width="16" height="16"/>
-  <object id="62" name="Ground" x="112" y="272" width="16" height="16"/>
+  <object id="123" name="Ground" x="0" y="0" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="124" name="Ground" x="304" y="0" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="125" name="Ground" x="80" y="112" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="126" name="Ground" x="80" y="128" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="127" name="Ground" x="80" y="144" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="128" name="Ground" x="80" y="160" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="129" name="Ground" x="80" y="176" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="130" name="Ground" x="80" y="192" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="131" name="Ground" x="0" y="208" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="132" name="Ground" x="80" y="208" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="133" name="Ground" x="48" y="224" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="134" name="Ground" x="64" y="224" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="135" name="Ground" x="80" y="224" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="136" name="Ground" x="96" y="224" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="137" name="Ground" x="112" y="224" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="138" name="Ground" x="48" y="240" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="139" name="Ground" x="112" y="240" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="140" name="Ground" x="16" y="256" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="141" name="Ground" x="32" y="256" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="142" name="Ground" x="48" y="256" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="143" name="Ground" x="112" y="256" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="144" name="Ground" x="112" y="272" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="145" name="Ground" x="0" y="304" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
+  <object id="146" name="Ground" x="304" y="304" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ground"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>
