@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class LinearMovementBehaviour : MonoBehaviour
 {
-	private DirectionalSpriteBehaviour directionalSpriteBehaviour;
+	private MoveListenerBehaviour[] listeners;
 
 	void Start()
 	{
-		this.directionalSpriteBehaviour = GetComponentInChildren<DirectionalSpriteBehaviour>();
+		this.listeners = GetComponentsInChildren<MoveListenerBehaviour>();
 	}
 
-	public IEnumerator Move(Vector2 newMapPosition, Vector2 offsetInTile, float duration, bool changeDirectionalSprite = true)
+	public IEnumerator Move(Vector2 newMapPosition, Vector2 offsetInTile, float duration)
 	{
 		Vector3 endPos = Map.ConvertToWorldPosition(newMapPosition) + offsetInTile;
 		Vector3 startPos = transform.position;
 		Vector3 movement = endPos - startPos;
 
-		if(changeDirectionalSprite && this.directionalSpriteBehaviour != null)
+		foreach (var listener in this.listeners)
 		{
-			this.directionalSpriteBehaviour.SetSpriteDirection(movement);
+			listener.BeforeMove(movement);
 		}
 
 		Vector3 prevMovement = Vector3.zero;
@@ -32,6 +32,11 @@ public class LinearMovementBehaviour : MonoBehaviour
 
 			transform.position += movementDelta;
 			yield return null;
+		}
+
+		foreach (var listener in this.listeners)
+		{
+			listener.AfterMove(movement);
 		}
 	}
 }

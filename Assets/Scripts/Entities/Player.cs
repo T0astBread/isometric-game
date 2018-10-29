@@ -10,6 +10,9 @@ public class Player : Entity
 	private Animator animator;
 	private JumpBehaviour jumpBehaviour;
 	private LinearMovementBehaviour moveBehaviour;
+	private DirectionalSpriteBehaviour directionalSpriteBehaviour;
+
+	private bool freezeDirectionalSprite = false;
 
 	// Use this for initialization
 	void Start()
@@ -17,8 +20,7 @@ public class Player : Entity
 		this.animator = GetComponent<Animator>();
 		this.jumpBehaviour = GetComponentInChildren<JumpBehaviour>();
 		this.moveBehaviour = GetComponent<LinearMovementBehaviour>();
-
-		this.mapPosition = new Vector2Int(1, 16);
+		this.directionalSpriteBehaviour = GetComponentInChildren<DirectionalSpriteBehaviour>();
 	}
 
 	// Update is called once per frame
@@ -31,7 +33,7 @@ public class Player : Entity
 	private void HandleMovement(string axisName, string animatorParameterName)
 	{
 		float movement = Input.GetAxisRaw(axisName);
-		this.animator.SetFloat(animatorParameterName, movement);
+		this.animator.SetInteger(animatorParameterName, Mathf.RoundToInt(movement));
 	}
 
 	public override IEnumerator StepTo(Vector2Int newMapPosition, Vector2 offsetInTile)
@@ -48,7 +50,9 @@ public class Player : Entity
 		Vector3 worldMovement = (((Vector3) Map.ConvertToWorldPosition(newMapPosition)) - transform.position) * this.blockedStepXMovement;
 		for(int i = 1; i >= 0; i--)
 		{
-			yield return this.moveBehaviour.Move(this.mapPosition, i * worldMovement, this.blockedStepTime / 2, i == 1);
+			this.directionalSpriteBehaviour.enabled = i == 1;
+			yield return this.moveBehaviour.Move(this.mapPosition, i * worldMovement, this.blockedStepTime / 2);
 		}
+		this.directionalSpriteBehaviour.enabled = true;
 	}
 }

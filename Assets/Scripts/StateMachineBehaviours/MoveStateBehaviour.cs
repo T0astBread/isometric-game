@@ -36,6 +36,10 @@ public class MoveStateBehaviour : StateMachineBehaviour
 			animator.SetFloat("movement_speed_multiplier", 1 / player.blockedStepTime / 2);
 			movementCoroutine = player.StepBlockedTo(mapDestination);
 		}
+		else
+		{
+			animator.SetTrigger("cancel_movement");
+		}
 		if (movementCoroutine != null)
 		{
 			entity.StartCoroutine(movementCoroutine);
@@ -45,9 +49,9 @@ public class MoveStateBehaviour : StateMachineBehaviour
 	private float GetAxisMovement(Animator animator, string axisName)
 	{
 		axisName = "movement_input_" + axisName;
-		float movement = animator.GetFloat(axisName);
+		float movement = animator.GetInteger(axisName);
 		if (movement != 0) movement = Mathf.Sign(movement);
-		animator.SetFloat(axisName, 0);
+		animator.SetInteger(axisName, 0);
 		return movement;
 	}
 }
