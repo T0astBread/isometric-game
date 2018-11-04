@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class LinearMovementBehaviour : MonoBehaviour
 {
-	private MoveListenerBehaviour[] listeners;
+	private IMoveListener[] listeners;
 
 	void Start()
 	{
-		this.listeners = GetComponentsInChildren<MoveListenerBehaviour>();
+		this.listeners = GetComponentsInChildren<IMoveListener>();
 	}
 
 	public IEnumerator Move(Vector2 newMapPosition, Vector2 offsetInTile, float duration)
@@ -32,11 +32,6 @@ public class LinearMovementBehaviour : MonoBehaviour
 
 			transform.position += movementDelta;
 			yield return null;
-		}
-
-		foreach (var listener in this.listeners)
-		{
-			listener.AfterMove(movement);
 		}
 	}
 }

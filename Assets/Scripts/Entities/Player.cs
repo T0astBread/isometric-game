@@ -14,18 +14,18 @@ public class Player : Entity
 
 	private bool freezeDirectionalSprite = false;
 
-	// Use this for initialization
-	void Start()
+	override public void Start()
 	{
+		base.Start();
 		this.animator = GetComponent<Animator>();
 		this.jumpBehaviour = GetComponentInChildren<JumpBehaviour>();
 		this.moveBehaviour = GetComponent<LinearMovementBehaviour>();
 		this.directionalSpriteBehaviour = GetComponentInChildren<DirectionalSpriteBehaviour>();
 	}
 
-	// Update is called once per frame
-	void Update()
+	public override void Update()
 	{
+		base.Update();
 		HandleMovement("Horizontal", "movement_input_x");
 		HandleMovement("Vertical", "movement_input_y");
 	}
@@ -36,19 +36,29 @@ public class Player : Entity
 		this.animator.SetInteger(animatorParameterName, Mathf.RoundToInt(movement));
 	}
 
-	public override IEnumerator StepTo(Vector2Int newMapPosition, Vector2 offsetInTile)
+	public override IEnumerator ExecuteStepTo(Vector2Int newMapPosition, Vector2 offsetInTile)
 	{
 		StartCoroutine(this.jumpBehaviour.Jump(this.jumpBehaviour.jumpHeight, this.stepTime));
 		yield return this.moveBehaviour.Move(newMapPosition, offsetInTile, this.stepTime);
-		this.mapPosition = newMapPosition;
+	}
+
+	protected override void BeforeSideStep()
+	{
+		this.directionalSpriteBehaviour.SetSpriteDirection(-this.offsetInTileWhenMovingToSide);
+		this.directionalSpriteBehaviour.enabled = false;
+	}
+
+	protected override void AfterSideStep()
+	{
+		this.directionalSpriteBehaviour.enabled = true;
 	}
 
 	public IEnumerator StepBlockedTo(Vector2Int newMapPosition)
 	{
 		StartCoroutine(this.jumpBehaviour.Jump(this.jumpBehaviour.jumpHeight, this.blockedStepTime));
 
-		Vector3 worldMovement = (((Vector3) Map.ConvertToWorldPosition(newMapPosition)) - transform.position) * this.blockedStepXMovement;
-		for(int i = 1; i >= 0; i--)
+		Vector3 worldMovement = (((Vector3)Map.ConvertToWorldPosition(newMapPosition)) - transform.position) * this.blockedStepXMovement;
+		for (int i = 1; i >= 0; i--)
 		{
 			this.directionalSpriteBehaviour.enabled = i == 1;
 			yield return this.moveBehaviour.Move(this.mapPosition, i * worldMovement, this.blockedStepTime / 2);

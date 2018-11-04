@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DirectionalAnimationControllerBehaviour : MoveListenerBehaviour
+public class DirectionalAnimationControllerBehaviour : MonoBehaviour, IMoveListener
 {
 	public RuntimeAnimatorController northEastController, southEastController, southWestController, northWestController;
 
@@ -13,9 +13,10 @@ public class DirectionalAnimationControllerBehaviour : MoveListenerBehaviour
 		this.animator = GetComponent<Animator>();
 	}
 
-	override public void BeforeMove(Vector2 movement)
+	public void BeforeMove(Vector2 movement)
 	{
-		SetControllerDirection(movement);
+		if (this.enabled)
+			SetControllerDirection(movement);
 	}
 
 	public void SetControllerDirection(Vector2 direction)

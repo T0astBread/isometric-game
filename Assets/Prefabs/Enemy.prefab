@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1608370292961522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: -7.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -90,7 +90,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stepTime: 0.28
-  mapPosition: {x: 5, y: 10}
+  movementLocks: 0
+  mapPosition: {x: 0, y: 0}
+  positionTile: {fileID: 0}
+  isAtSideOfTile: 0
+  offsetInTileWhenMovingToSide: {x: 0, y: 0}
+  offsetDistanceWhenMovingToSide: 0.35
 --- !u!114 &114104290551586470
 MonoBehaviour:
   m_ObjectHideFlags: 1

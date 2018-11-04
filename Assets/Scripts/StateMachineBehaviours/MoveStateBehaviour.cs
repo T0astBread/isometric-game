@@ -28,9 +28,24 @@ public class MoveStateBehaviour : StateMachineBehaviour
 		if (destinationTileExists)
 		{
 			animator.SetFloat("movement_speed_multiplier", 1);
-			movementCoroutine = entity.StepTo(mapDestination, Vector2.zero);
+
+			Tile destinationTile = Map.Tiles[mapDestination];
+			bool destinationTileIsEmpty = destinationTile.EntitiesOnTile.Count <= 0;
+			if (destinationTileIsEmpty)
+			{
+				movementCoroutine = entity.StepTo(mapDestination, Vector2.zero);
+			}
+			else
+			{
+				Vector2 ownOffset = (Map.ConvertToWorldPosition(mapDestination) - (Vector2)animator.transform.position) * -entity.offsetDistanceWhenMovingToSide;
+				destinationTile.EntitiesOnTile.ForEach(opposingEntity => {
+					opposingEntity.offsetInTileWhenMovingToSide = -ownOffset.normalized * opposingEntity.offsetDistanceWhenMovingToSide;
+				});
+				movementCoroutine = entity.StepTo(mapDestination, ownOffset);
+			}
+			entity.isAtSideOfTile = !destinationTileIsEmpty;
 		}
-		else if (entity is Player)
+		else if (entity is Player && !entity.isAtSideOfTile)
 		{
 			Player player = entity as Player;
 			animator.SetFloat("movement_speed_multiplier", 1 / player.blockedStepTime / 2);
