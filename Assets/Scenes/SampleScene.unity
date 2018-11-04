@@ -381,6 +381,7 @@ GameObject:
   - component: {fileID: 1781891707}
   - component: {fileID: 1781891708}
   - component: {fileID: 1781891709}
+  - component: {fileID: 1781891710}
   m_Layer: 0
   m_Name: SpriteWrapper
   m_TagString: Untagged
@@ -433,8 +434,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 742366935
-  m_SortingLayer: 2
+  m_SortingLayerID: -431391563
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300002, guid: b98b90b3e25054d419f497080f54b806, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -477,6 +478,17 @@ MonoBehaviour:
   jumpHeight: 0.5
   jumpDuration: 0.5
   resetPositionAfterJump: 1
+--- !u!114 &1781891710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1781891705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c690d505540e2194fb5a5dac1dcd0e2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2076172522
 Prefab:
   m_ObjectHideFlags: 0

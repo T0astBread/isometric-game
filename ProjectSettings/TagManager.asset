@@ -41,11 +41,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Enemies
+  - name: Entities
     uniqueID: 3863575733
-    locked: 0
-  - name: Player
-    uniqueID: 742366935
     locked: 0
   - name: Terrain
     uniqueID: 4158361703
