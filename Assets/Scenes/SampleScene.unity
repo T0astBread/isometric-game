@@ -257,6 +257,7 @@ GameObject:
   - component: {fileID: 716157405}
   - component: {fileID: 716157406}
   - component: {fileID: 716157403}
+  - component: {fileID: 716157407}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -328,6 +329,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e464b00c1dce2ba479969e06bdec8174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &716157407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 716157402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c690d505540e2194fb5a5dac1dcd0e2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1470539176
 Prefab:
   m_ObjectHideFlags: 0
@@ -381,7 +393,6 @@ GameObject:
   - component: {fileID: 1781891707}
   - component: {fileID: 1781891708}
   - component: {fileID: 1781891709}
-  - component: {fileID: 1781891710}
   m_Layer: 0
   m_Name: SpriteWrapper
   m_TagString: Untagged
@@ -478,17 +489,6 @@ MonoBehaviour:
   jumpHeight: 0.5
   jumpDuration: 0.5
   resetPositionAfterJump: 1
---- !u!114 &1781891710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1781891705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c690d505540e2194fb5a5dac1dcd0e2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2076172522
 Prefab:
   m_ObjectHideFlags: 0

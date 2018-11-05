@@ -10,7 +10,7 @@ public class YSortBehaviour : MonoBehaviour
 
 	void Start()
 	{
-		this.spriteRenderer = GetComponent<SpriteRenderer>();
+		this.spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 	}
 
 	void Update()
