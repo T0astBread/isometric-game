@@ -22,15 +22,20 @@ public class MoveStateBehaviour : StateMachineBehaviour
 
 		Entity entity = animator.GetComponent<Entity>();
 		Vector2Int mapDestination = entity.mapPosition + step;
-		bool destinationTileExists = Map.Tiles.ContainsKey(mapDestination);
+
+		Tile destinationTile;
+		int entitiesOnTile = 0;
+		if (Map.Tiles.TryGetValue(mapDestination, out destinationTile))
+		{
+			entitiesOnTile = destinationTile.EntitiesOnTile.Count;
+		}
 
 		IEnumerator movementCoroutine = null;
-		if (destinationTileExists)
+		if (destinationTile != null && entitiesOnTile < 2)
 		{
 			animator.SetFloat("movement_speed_multiplier", 1);
 
-			Tile destinationTile = Map.Tiles[mapDestination];
-			bool destinationTileIsEmpty = destinationTile.EntitiesOnTile.Count <= 0;
+			bool destinationTileIsEmpty = entitiesOnTile <= 0;
 			if (destinationTileIsEmpty)
 			{
 				movementCoroutine = entity.StepTo(mapDestination, Vector2.zero);
