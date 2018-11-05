@@ -10,7 +10,6 @@ public class Player : Entity
 	private Animator animator;
 	private JumpBehaviour jumpBehaviour;
 	private LinearMovementBehaviour moveBehaviour;
-	private DirectionalSpriteBehaviour directionalSpriteBehaviour;
 
 	private bool freezeDirectionalSprite = false;
 
@@ -20,7 +19,6 @@ public class Player : Entity
 		this.animator = GetComponent<Animator>();
 		this.jumpBehaviour = GetComponentInChildren<JumpBehaviour>();
 		this.moveBehaviour = GetComponent<LinearMovementBehaviour>();
-		this.directionalSpriteBehaviour = GetComponentInChildren<DirectionalSpriteBehaviour>();
 	}
 
 	public override void Update()
@@ -36,21 +34,10 @@ public class Player : Entity
 		this.animator.SetInteger(animatorParameterName, Mathf.RoundToInt(movement));
 	}
 
-	public override IEnumerator ExecuteStepTo(Vector2Int newMapPosition, Vector2 offsetInTile)
+	protected override IEnumerator _StepTo(Vector2Int newMapPosition, Vector2 offsetInTile, Vector2 totalMovement)
 	{
 		StartCoroutine(this.jumpBehaviour.Jump(this.jumpBehaviour.jumpHeight, this.stepTime));
-		yield return this.moveBehaviour.Move(newMapPosition, offsetInTile, this.stepTime);
-	}
-
-	protected override void BeforeSideStep()
-	{
-		this.directionalSpriteBehaviour.SetSpriteDirection(-this.offsetInTileWhenMovingToSide);
-		this.directionalSpriteBehaviour.enabled = false;
-	}
-
-	protected override void AfterSideStep()
-	{
-		this.directionalSpriteBehaviour.enabled = true;
+		yield return this.moveBehaviour.Move(totalMovement, this.stepTime);
 	}
 
 	public IEnumerator StepBlockedTo(Vector2Int newMapPosition)
@@ -58,11 +45,10 @@ public class Player : Entity
 		StartCoroutine(this.jumpBehaviour.Jump(this.jumpBehaviour.jumpHeight, this.blockedStepTime));
 
 		Vector3 worldMovement = (((Vector3)Map.ConvertToWorldPosition(newMapPosition)) - transform.position) * this.blockedStepXMovement;
+		SetDirection(worldMovement);
 		for (int i = 1; i >= 0; i--)
 		{
-			this.directionalSpriteBehaviour.enabled = i == 1;
-			yield return this.moveBehaviour.Move(this.mapPosition, i * worldMovement, this.blockedStepTime / 2);
+			yield return this.moveBehaviour.Move(CalculateTotalMovement(this.mapPosition, i * worldMovement), this.blockedStepTime / 2);
 		}
-		this.directionalSpriteBehaviour.enabled = true;
 	}
 }

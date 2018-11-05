@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DirectionalSpriteBehaviour : MonoBehaviour, IMoveListener
+public class DirectionalSpriteBehaviour : DirectionalBehaviour
 {
 	public const int SOUTH_EAST = 0, SOUTH_WEST = 1, NORTH_EAST = 2, NORTH_WEST = 3;
 
@@ -15,18 +15,12 @@ public class DirectionalSpriteBehaviour : MonoBehaviour, IMoveListener
 		this.spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
-	public void BeforeMove(Vector2 movement)
-	{
-		if (this.enabled)
-			SetSpriteDirection(movement);
-	}
-
 	public void SetSpriteDirection(int directionIndex)
 	{
 		this.spriteRenderer.sprite = this.directionalSprites[directionIndex];
 	}
 
-	public void SetSpriteDirection(Vector2 direction)
+	override protected void _SetDirection(Vector2 direction)
 	{
 		int directionIndex = ((direction.y > 0 ? 1 : 0) << 1) | (direction.x > 0 ? 0 : 1);
 		SetSpriteDirection(directionIndex);
