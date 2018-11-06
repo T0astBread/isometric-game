@@ -13,10 +13,12 @@ public abstract class Entity : MonoBehaviour
 	public float offsetDistanceWhenMovingToSide = .35f;
 
 	protected DirectionalBehaviour[] directionalBehaviours;
+	private IMovementRestriction[] movementRestrictions;
 
 	public virtual void Start()
 	{
 		this.directionalBehaviours = GetComponentsInChildren<DirectionalBehaviour>();
+		this.movementRestrictions = GetComponents<IMovementRestriction>();
 		RegisterNewMapPosition(this.mapPosition);
 	}
 
@@ -33,6 +35,16 @@ public abstract class Entity : MonoBehaviour
 		{
 			StartCoroutine(StepToSideOfTile());
 		}
+	}
+
+	public bool CanMoveTo(Vector2Int mapPosition, Tile destinationTile)
+	{
+		foreach (var movementRestriction in this.movementRestrictions)
+		{
+			if (!movementRestriction.Allows(mapPosition, destinationTile))
+				return false;
+		}
+		return true;
 	}
 
 	public IEnumerator StepTo(Vector2Int newMapPosition, Vector2 offsetInTile)

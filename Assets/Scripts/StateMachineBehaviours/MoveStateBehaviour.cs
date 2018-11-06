@@ -21,7 +21,7 @@ public class MoveStateBehaviour : StateMachineBehaviour
 
 		// Get the right coroutine to use, if any
 		IEnumerator movementCoroutine = null;
-		if (destinationTile != null && entitiesOnTile < 2)
+		if (destinationTile != null && entitiesOnTile < 2 && entity.CanMoveTo(mapDestination, destinationTile))
 		{
 			animator.SetFloat("movement_speed_multiplier", 1);
 
