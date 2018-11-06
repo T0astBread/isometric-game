@@ -27,7 +27,7 @@ public class JumpBehaviour : MonoBehaviour
 
 		if (this.resetPositionAfterJump)
 		{
-			transform.position = Map.RoundToGridPosition(transform.position);
+			transform.localPosition = Vector3.zero;
 		}
 	}
 
