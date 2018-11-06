@@ -19,10 +19,7 @@ public class RandomWalkBehaviour : MonoBehaviour
 			yield return new WaitForSeconds(GenerateTimeUntilNextWalk());
 
 			AnimatorStateInfo currentState = this.animator.GetCurrentAnimatorStateInfo(layerIndex);
-			while(!this.enabled || !currentState.IsName("Idle") || this.animator.IsInTransition(layerIndex))
-			{
-				yield return new WaitForSeconds(.1f);
-			}
+			yield return new WaitWhile(() => !this.enabled || !currentState.IsName("Idle") || this.animator.IsInTransition(layerIndex));
 
 			WalkRandomly();
 		}
