@@ -5,12 +5,17 @@ using UnityEngine;
 public abstract class Entity : MonoBehaviour
 {
 	public float stepTime = .5f;
-	public int movementLocks = 0;
 	public Vector2Int mapPosition;
-	public Tile positionTile;
-	public bool isAtSideOfTile = false;
-	public Vector2 offsetInTileWhenMovingToSide;
 	public float offsetDistanceWhenMovingToSide = .35f;
+	
+	[HideInInspector]
+	public int movementLocks = 0;
+	[HideInInspector]
+	public Tile positionTile;
+	[HideInInspector]
+	public bool isAtSideOfTile = false;
+	[HideInInspector]
+	public Vector2 offsetInTileWhenMovingToSide;
 
 	protected DirectionalBehaviour[] directionalBehaviours;
 	private IMovementRestriction[] movementRestrictions;
