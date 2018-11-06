@@ -282,12 +282,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stepTime: 0.5
-  movementLocks: 0
   mapPosition: {x: 1, y: 16}
+  offsetDistanceWhenMovingToSide: 0.35
+  movementLocks: 0
   positionTile: {fileID: 0}
   isAtSideOfTile: 0
   offsetInTileWhenMovingToSide: {x: 0, y: 0}
-  offsetDistanceWhenMovingToSide: 0.35
   blockedStepTime: 0.25
   blockedStepXMovement: 0.1
 --- !u!4 &716157404
@@ -493,11 +493,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6685a8f229e9ac74eb3c2284a1aaf887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directionalSprites:
-  - {fileID: 21300002, guid: b98b90b3e25054d419f497080f54b806, type: 3}
-  - {fileID: 21300004, guid: b98b90b3e25054d419f497080f54b806, type: 3}
-  - {fileID: 21300000, guid: b98b90b3e25054d419f497080f54b806, type: 3}
-  - {fileID: 21300006, guid: b98b90b3e25054d419f497080f54b806, type: 3}
+  northEastItem: {fileID: 21300000, guid: b98b90b3e25054d419f497080f54b806, type: 3}
+  southEastItem: {fileID: 21300002, guid: b98b90b3e25054d419f497080f54b806, type: 3}
+  southWestItem: {fileID: 21300004, guid: b98b90b3e25054d419f497080f54b806, type: 3}
+  northWestItem: {fileID: 21300006, guid: b98b90b3e25054d419f497080f54b806, type: 3}
 --- !u!114 &1781891709
 MonoBehaviour:
   m_ObjectHideFlags: 0

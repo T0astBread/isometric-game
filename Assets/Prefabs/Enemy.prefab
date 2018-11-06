@@ -91,12 +91,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stepTime: 0.28
-  movementLocks: 0
   mapPosition: {x: 0, y: 0}
+  offsetDistanceWhenMovingToSide: 0.35
+  movementLocks: 0
   positionTile: {fileID: 0}
   isAtSideOfTile: 0
   offsetInTileWhenMovingToSide: {x: 0, y: 0}
-  offsetDistanceWhenMovingToSide: 0.35
 --- !u!114 &114104290551586470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,14 +119,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5568c4fcd690c9849b476df67176e63f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  northEastController: {fileID: 22100000, guid: 1682c511190f11d48bb918f14c6d7ea9,
-    type: 2}
-  southEastController: {fileID: 22100000, guid: 1e17a63f264b4854aa771bd5c89be55e,
-    type: 2}
-  southWestController: {fileID: 22100000, guid: 80619affd1d935f4488395cbf700f8a0,
-    type: 2}
-  northWestController: {fileID: 22100000, guid: 1682c511190f11d48bb918f14c6d7ea9,
-    type: 2}
+  northEastItem: {fileID: 22100000, guid: 1682c511190f11d48bb918f14c6d7ea9, type: 2}
+  southEastItem: {fileID: 22100000, guid: 1e17a63f264b4854aa771bd5c89be55e, type: 2}
+  southWestItem: {fileID: 22100000, guid: 80619affd1d935f4488395cbf700f8a0, type: 2}
+  northWestItem: {fileID: 22100000, guid: 1682c511190f11d48bb918f14c6d7ea9, type: 2}
 --- !u!114 &114778283177147290
 MonoBehaviour:
   m_ObjectHideFlags: 1
