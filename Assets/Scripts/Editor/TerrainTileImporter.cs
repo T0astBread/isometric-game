@@ -18,5 +18,6 @@ class TerrainTileImporter : Tiled2Unity.ICustomTiledImporter
 
     public void CustomizePrefab(GameObject prefab)
     {
+        prefab.AddComponent<LevelObject>();
     }
 }

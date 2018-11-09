@@ -9,10 +9,14 @@ public class RandomWalkBehaviour : MonoBehaviour
 
 	private Animator animator;
 
-	IEnumerator Start()
+	void OnEnable()
 	{
 		this.animator = GetComponent<Animator>();
+		StartCoroutine(WalkForever());
+	}
 
+	private IEnumerator WalkForever()
+	{
 		int layerIndex = this.animator.GetLayerIndex("Base Layer");
 		while (true)
 		{

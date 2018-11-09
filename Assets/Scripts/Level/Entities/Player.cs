@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(LinearMovementBehaviour))]
+[RequireComponent(typeof(LinearMovementBehaviour), typeof(JumpBehaviour))]
 public class Player : Entity
 {
 	public float blockedStepTime = .25f, blockedStepXMovement = .1f;
@@ -10,6 +10,7 @@ public class Player : Entity
 	private Animator animator;
 	private JumpBehaviour jumpBehaviour;
 	private LinearMovementBehaviour moveBehaviour;
+	private BattleBehaviour battleBehaviour;
 
 	private bool freezeDirectionalSprite = false;
 
@@ -19,19 +20,41 @@ public class Player : Entity
 		this.animator = GetComponent<Animator>();
 		this.jumpBehaviour = GetComponentInChildren<JumpBehaviour>();
 		this.moveBehaviour = GetComponent<LinearMovementBehaviour>();
+		this.battleBehaviour = GetComponent<BattleBehaviour>();
+
+		// this.battleBehaviour.StartBattle(GameObject.Find("Enemy").GetComponent<Enemy>());
 	}
 
-	public override void Update()
+	override public void OnEnable()
+	{
+		base.OnEnable();
+		ResetPosition();
+	}
+
+	override public void Update()
 	{
 		base.Update();
 		HandleMovement("Horizontal", "movement_input_x");
 		HandleMovement("Vertical", "movement_input_y");
+
+		if (Input.GetKeyDown(KeyCode.B))
+		{
+			this.battleBehaviour.StartBattle(GameObject.Find("Enemy").GetComponent<Enemy>());
+		}
 	}
 
 	private void HandleMovement(string axisName, string animatorParameterName)
 	{
 		float movement = Input.GetAxisRaw(axisName);
 		this.animator.SetInteger(animatorParameterName, Mathf.RoundToInt(movement));
+	}
+
+	override public void ResetPosition()
+	{
+		base.ResetPosition();
+		transform.Find("SpriteWrapper").localPosition = Vector3.zero;
+		this.animator.SetInteger("movement_input_x", 0);
+		this.animator.SetInteger("movement_input_y", 0);
 	}
 
 	protected override IEnumerator _StepTo(Vector2Int newMapPosition, Vector2 offsetInTile, Vector2 totalMovement)

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4459018764244518}
   - component: {fileID: 212832253976063036}
   - component: {fileID: 95522233187079676}
+  - component: {fileID: 114067523530534116}
   - component: {fileID: 114062212567018792}
   - component: {fileID: 114104290551586470}
   - component: {fileID: 114265207085291982}
@@ -97,6 +98,17 @@ MonoBehaviour:
   positionTile: {fileID: 0}
   isAtSideOfTile: 0
   offsetInTileWhenMovingToSide: {x: 0, y: 0}
+--- !u!114 &114067523530534116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1608370292961522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98fa569ea049de349a0c5089198fc462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114104290551586470
 MonoBehaviour:
   m_ObjectHideFlags: 1

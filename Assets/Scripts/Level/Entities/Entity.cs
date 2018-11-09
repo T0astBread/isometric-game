@@ -9,7 +9,7 @@ public abstract class Entity : MonoBehaviour
 	public float offsetDistanceWhenMovingToSide = .35f;
 	
 	[HideInInspector]
-	public int movementLocks = 0;
+	public bool isMoving = false;
 	[HideInInspector]
 	public Tile positionTile;
 	[HideInInspector]
@@ -24,7 +24,11 @@ public abstract class Entity : MonoBehaviour
 	{
 		this.directionalBehaviours = GetComponentsInChildren<DirectionalBehaviour>();
 		this.movementRestrictions = GetComponents<IMovementRestriction>();
-		RegisterNewMapPosition(this.mapPosition);
+	}
+
+	public virtual void OnEnable()
+	{
+		ResetPosition();
 	}
 
 	public virtual void Update()
@@ -54,9 +58,9 @@ public abstract class Entity : MonoBehaviour
 
 	public IEnumerator StepTo(Vector2Int newMapPosition, Vector2 offsetInTile)
 	{
-		if (this.movementLocks <= 0)
+		if (!this.isMoving)
 		{
-			this.movementLocks++;
+			this.isMoving = true;
 			UnregisterMapPosition();
 
 			Vector3 movement = CalculateTotalMovement(newMapPosition, offsetInTile);
@@ -64,7 +68,7 @@ public abstract class Entity : MonoBehaviour
 			yield return _StepTo(newMapPosition, offsetInTile, movement);
 
 			RegisterNewMapPosition(newMapPosition);
-			this.movementLocks--;
+			this.isMoving = false;
 		}
 	}
 
@@ -98,15 +102,17 @@ public abstract class Entity : MonoBehaviour
 
 	public IEnumerator StepToSideOfTile()
 	{
-		if (this.movementLocks <= 0)
+		if (!this.isMoving)
 		{
-			this.movementLocks++;
+			this.isMoving = true;
+
 			this.isAtSideOfTile = true;
 			BeforeSideStep();
 			Vector3 movement = this.offsetInTileWhenMovingToSide;
 			yield return _StepTo(this.mapPosition, this.offsetInTileWhenMovingToSide, movement);
 			AfterSideStep();
-			this.movementLocks--;
+
+			this.isMoving = false;
 		}
 	}
 
@@ -129,13 +135,15 @@ public abstract class Entity : MonoBehaviour
 
 	private IEnumerator StepToCenterOfTile()
 	{
-		if (this.movementLocks <= 0)
+		if (!this.isMoving)
 		{
-			this.movementLocks++;
+			this.isMoving = true;
+
 			this.isAtSideOfTile = false;
 			Vector3 movement = CalculateTotalMovement(this.mapPosition, Vector2.zero);
 			yield return _StepTo(this.mapPosition, Vector2.zero, movement);
-			this.movementLocks--;
+
+			this.isMoving = false;
 		}
 	}
 
@@ -145,5 +153,15 @@ public abstract class Entity : MonoBehaviour
 		{
 			directionalBehaviour.SetDirection(direction);
 		}
+	}
+
+	public virtual void ResetPosition()
+	{
+		Debug.Log("Resetting position of " + gameObject.name);
+		Vector2 correctPosition = Map.ConvertToWorldPosition(this.mapPosition);
+		transform.position = new Vector3(correctPosition.x, correctPosition.y, transform.position.z);
+		UnregisterMapPosition();
+		RegisterNewMapPosition(this.mapPosition);
+		this.isMoving = false;
 	}
 }
