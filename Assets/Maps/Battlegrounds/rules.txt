@@ -1,0 +1,1 @@
+../AutoMapRules/ground_tiles_bottoms.tmx

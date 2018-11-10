@@ -94,7 +94,7 @@ MonoBehaviour:
   stepTime: 0.28
   mapPosition: {x: 0, y: 0}
   offsetDistanceWhenMovingToSide: 0.35
-  movementLocks: 0
+  isMoving: 0
   positionTile: {fileID: 0}
   isAtSideOfTile: 0
   offsetInTileWhenMovingToSide: {x: 0, y: 0}
