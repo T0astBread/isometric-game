@@ -1014,10 +1014,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1778090142079960, guid: 335c5f60961d61a44a8eaee4c8393534, type: 2}
-      propertyPath: m_Name
-      value: Button
-      objectReference: {fileID: 0}
     - target: {fileID: 114717287857345316, guid: 335c5f60961d61a44a8eaee4c8393534,
         type: 2}
       propertyPath: m_havePropertiesChanged
@@ -1484,7 +1480,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5c8693f505b88484d90ef6e024384135, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e3983325be8eacb4f84fef8cb27a5b39, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
