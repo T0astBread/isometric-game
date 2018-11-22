@@ -2,7 +2,9 @@ Generated/*
 Generated.meta
 
 !Generated/*.png.meta
+
 !Generated/UI/
+Generated/UI/*.png
 !Generated/UI/*.png.meta
 
 Backup/
